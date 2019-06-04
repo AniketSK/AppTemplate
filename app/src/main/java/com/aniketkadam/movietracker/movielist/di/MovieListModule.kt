@@ -8,5 +8,5 @@ import dagger.Provides
 @Module
 class MovieListModule {
     @Provides
-    fun providesModelStore(movieApis: MovieApis) = ModelStore()
+    fun providesModelStore(movieApis: MovieApis) = ModelStore(movieApis)
 }

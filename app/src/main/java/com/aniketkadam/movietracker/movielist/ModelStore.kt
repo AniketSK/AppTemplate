@@ -4,11 +4,7 @@ import com.aniketkadam.movietracker.movielist.network.MovieApis
 import javax.inject.Inject
 
 
-class ModelStore @Inject constructor() {
-    @Inject
-    lateinit var movieApis: MovieApis
-
-    val movies by lazy { movieApis.getNowPlaying() }
+class ModelStore @Inject constructor(movieApis: MovieApis) {
 }
 
 sealed class MovieRetrieveal {
