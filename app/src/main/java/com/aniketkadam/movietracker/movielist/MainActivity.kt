@@ -1,14 +1,22 @@
-package com.aniketkadam.movietracker
+package com.aniketkadam.movietracker.movielist
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
-
+import com.aniketkadam.movietracker.R
+import com.google.android.material.snackbar.Snackbar
+import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+/**
+ * Currently for the movie list
+ *
+ */
+class MainActivity : DaggerAppCompatActivity() {
+
+    @Inject
+    lateinit var modelStore: ModelStore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

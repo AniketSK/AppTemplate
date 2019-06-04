@@ -25,6 +25,10 @@ android {
     dataBinding {
         enabled = true
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -85,5 +89,11 @@ dependencies {
     implementation room.rxjava
     testImplementation room.test
     kapt room.compiler
+
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation group: 'com.squareup.retrofit2', name: 'adapter-rxjava2', version: '2.5.0'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.14.1'
+
 
 }
