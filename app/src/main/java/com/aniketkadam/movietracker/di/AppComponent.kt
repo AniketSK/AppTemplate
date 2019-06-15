@@ -10,7 +10,10 @@ import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class, AppModule::class, ActivityBuilder::class, NetworkModule::class])
+@Component(
+    modules = [AndroidSupportInjectionModule::class,
+        AppModule::class, ActivityBuilder::class, NetworkModule::class]
+)
 interface AppComponent : AndroidInjector<MovieTrackerApplication> {
 
     override fun inject(app: MovieTrackerApplication)
