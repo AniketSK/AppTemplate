@@ -32,9 +32,14 @@ ext {
             navigation      : "1.0.0-alpha08",
             jodatime        : "2.10.1",
             jetifier        : "1.0.0-beta02",
-            room            : "2.1.0-alpha03"
+            room            : "2.1.0-alpha03",
+            detekt          : "1.0.0-RC15"
     ]
 
+    detekt = [
+            gradlePlugin: "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${versions.detekt}",
+            apply       : "io.gitlab.arturbosch.detekt"
+    ]
     kotlinstd = [
             lib: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}"
     ]
